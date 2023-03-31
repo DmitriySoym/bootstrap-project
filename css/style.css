@@ -523,7 +523,8 @@ h6 {
     height: 8rem;
   }
   .header__bueger-wrapper {
-    top: 2.5rem;
+    left: 2rem;
+    top: 2rem;
   }
   .header__row-mobile {
     padding-top: 1.8rem;
@@ -972,6 +973,7 @@ h6 {
   }
   .doctor__name {
     font-size: 1.4rem;
+    bottom: 3rem;
   }
 }
 
@@ -993,7 +995,7 @@ h6 {
   content: "";
   position: relative;
   z-index: 2;
-  left: 50%;
+  left: calc(50% - 1.2rem);
   top: 14rem;
   display: block;
   width: 2.4rem;
