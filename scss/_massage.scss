@@ -1,0 +1,163 @@
+.massage {
+	position: relative;
+	padding-top: 7.6rem;
+	margin-bottom: 5.6rem;
+
+	&__procedure {
+		position: relative;
+		padding-left: 2.4rem;
+		border-left: 2px solid #c9ab63;
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #c9ab63;
+	}
+
+	&__title {
+		padding-top: 1.5rem;
+		margin-bottom: 3rem;
+		font-size: 5rem;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #0f0f28;
+	}
+
+	&__text {
+		margin-bottom: 1.6rem;
+		font-size: 1.8rem;
+		max-width: 56.6rem;
+		width: 100%;
+		vertical-align: top;
+		line-height: 140%;
+		color: rgba(15, 15, 40, 0.6);
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__img-item {
+		width: 100%;
+	}
+
+	&__btn {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 3.2rem;
+		width: 17rem;
+		height: 6.4rem;
+		background: #c9ab63;
+		overflow: hidden;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		transition: all 0.3s linear;
+
+		&:hover {
+			color: #0f0f28;
+			box-shadow: 0px 5px 10px 0px #c9ab63;
+		}
+
+		&:after {
+			content: "";
+			width: 17rem;
+			height: 8rem;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			background-image: url(../img/animation/btn-blick.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			-webkit-animation: btn_shine 5s linear infinite;
+			animation: btn_shine 5s linear infinite;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		padding-top: 4.6rem;
+		margin-bottom: 15rem;
+		&::after {
+			bottom: -5rem;
+		}
+
+		&__procedure {
+			margin-bottom: 4rem;
+		}
+
+		&__title {
+			padding-top: 0.8rem;
+			font-size: 4.4rem;
+			margin-bottom: 1.6rem;
+		}
+
+		&__text {
+			max-width: unset;
+			padding-right: 9.1rem;
+		}
+	}
+
+	@media (max-width: 992px) {
+		&__btn {
+			margin-top: 2.4rem;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		&__btn {
+			width: 15.6rem;
+			height: 4.6rem;
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			padding-right: unset;
+		}
+	}
+
+	@media (max-width: 576px) {
+		margin-bottom: 8rem;
+		&::after {
+			width: 22rem;
+			bottom: -4rem;
+		}
+	}
+}
+
+@-webkit-keyframes btn_shine {
+	0% {
+		left: -15rem;
+	}
+
+	to {
+		left: calc(100% + 15rem);
+	}
+}
+
+@keyframes btn_shine {
+	0% {
+		left: -10rem;
+	}
+
+	to {
+		left: calc(100% + 10rem);
+	}
+}

@@ -1,0 +1,201 @@
+%flextext {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	padding-left: 2.4rem;
+	padding-bottom: 2.4rem;
+	cursor: pointer;
+
+	@media (max-width: 700px) {
+		padding-left: 0.8rem;
+		padding-bottom: 0.8rem;
+	}
+}
+
+.grid-section {
+	display: flex;
+	flex-direction: column;
+
+	@supports (display: grid) {
+		display: grid;
+		height: 101.6rem;
+	}
+
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"block1 block2 block3 block3"
+		"block1 block4 block5 block6"
+		"block7 block8 block9 block9";
+	gap: 1rem;
+	max-width: 160rem;
+	width: 100%;
+	padding: 0 0.5rem;
+	margin-bottom: 3rem;
+
+	&__title {
+		max-width: 26.6rem;
+		font-weight: 700;
+		font-size: 3.2rem;
+		line-height: 100%;
+		color: #ffffff;
+	}
+
+	&__sub {
+		margin-bottom: 0;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 140%;
+		text-transform: capitalize;
+		color: #ffffff;
+		opacity: 0.8;
+	}
+
+	&__block-1 {
+		@extend %flextext;
+		grid-area: block1;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-1.jpg) no-repeat right -10rem top/cover;
+	}
+
+	&__block-2 {
+		@extend %flextext;
+		grid-area: block2;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-2.jpg) no-repeat right top/cover;
+	}
+
+	&__block-3 {
+		@extend %flextext;
+		grid-area: block3;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-3-9.jpg) no-repeat right top/cover;
+	}
+
+	&__block-4 {
+		@extend %flextext;
+		grid-area: block4;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-4.jpg) no-repeat right top/cover;
+	}
+
+	&__block-5 {
+		@extend %flextext;
+		grid-area: block5;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-5.jpg) no-repeat right top/cover;
+	}
+
+	&__block-6 {
+		@extend %flextext;
+		grid-area: block6;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-6.jpg) no-repeat right top/cover;
+	}
+
+	&__block-7 {
+		@extend %flextext;
+		grid-area: block7;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-7.jpg) no-repeat right top/cover;
+	}
+
+	&__block-8 {
+		@extend %flextext;
+		grid-area: block8;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-8.jpg) no-repeat right top/cover;
+	}
+
+	&__block-9 {
+		@extend %flextext;
+		grid-area: block9;
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 27.42%,
+				rgba(0, 0, 0, 0.6) 100%
+			),
+			url(../img/grid-section/block-3-9.jpg) no-repeat right top/cover;
+	}
+
+	@media (max-width: 1200px) {
+		margin: 0 auto;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"block2 block4"
+			"block1 block1"
+			"block7 block8"
+			"block3 block3"
+			"block5 block6"
+			"block9 block9";
+		gap: 0.8rem;
+		max-width: 70.8rem;
+		width: 100%;
+		height: 196rem;
+
+		&__title {
+			font-size: 2.4rem;
+		}
+
+		&__block-1 {
+			background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0) 27.42%,
+					rgba(0, 0, 0, 0.6) 100%
+				),
+				url(../img/grid-section/block-1.jpg) no-repeat right top/cover;
+		}
+	}
+
+	@media (max-width: 700px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(9, 1fr);
+		grid-template-areas:
+			"block2"
+			"block4"
+			"block1"
+			"block7"
+			"block8"
+			"block3"
+			"block5"
+			"block6"
+			"block9";
+
+		&__title {
+			font-size: 1.8rem;
+		}
+	}
+}

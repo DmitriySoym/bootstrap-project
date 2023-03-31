@@ -1,0 +1,85 @@
+// fonts
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria-Medium.woff2") format("woff2"),
+		url("../fonts/Geometria-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria-Regular.woff2") format("woff2"),
+		url("../fonts/Geometria-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria-Bold.woff2") format("woff2"),
+		url("../fonts/Geometria-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+//imports
+@import "_preload";
+@import "_nullstyle";
+@import "_intro";
+@import "_header";
+@import "_title";
+@import "_services";
+@import "_tabs";
+@import "_team";
+@import "_doctor";
+@import "_massage";
+@import "_button";
+@import "_faq";
+@import "_grid-section";
+
+html {
+	font-size: 10px;
+	font-family: "Geometria";
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.main-wrapper {
+	display: flex;
+	@media (max-width: 1200px) {
+		flex-direction: column;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 162.4rem;
+	width: 100%;
+	overflow: hidden;
+
+	@media (max-width: 1200px) {
+		flex-direction: column;
+		justify-content: start;
+	}
+}
+
+.container {
+	max-width: 137.6rem;
+	padding-top: 8rem;
+
+	@media (max-width: 1200px) {
+		padding-top: 6rem;
+	}
+
+	@media (max-width: 767px) {
+		padding-top: 5rem;
+	}
+}

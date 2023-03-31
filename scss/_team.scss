@@ -1,0 +1,39 @@
+.team {
+	text-align: center;
+	margin-bottom: 6rem;
+
+	&__subtitle {
+		padding-bottom: 1.6rem;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #c9ab63;
+	}
+
+	&__title {
+		padding-bottom: 3.2rem;
+		font-weight: 400;
+		font-size: 5rem;
+		line-height: 100%;
+		text-transform: uppercase;
+		color: #0f0f28;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		line-height: 140%;
+		color: rgba(15, 15, 40, 0.6);
+	}
+
+	@media (max-width: 1200px) {
+		&__title {
+			font-size: 4.4rem;
+			padding-bottom: 2.4rem;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
+}

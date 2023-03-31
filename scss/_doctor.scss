@@ -1,0 +1,121 @@
+.doctors {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 0.2rem;
+	row-gap: 0.4rem;
+	align-items: stretch;
+	justify-content: center;
+	margin-bottom: 3.2rem;
+}
+
+.doctor {
+	position: relative;
+	width: 34.3rem;
+	height: 52rem;
+	border-bottom: 4px solid #c9ab63;
+
+	&::after {
+		content: "";
+		width: 100%;
+		height: 73%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(43, 43, 88, 0)),
+			to(#1d1d4e)
+		);
+		background: linear-gradient(
+			180deg,
+			rgba(43, 43, 88, 0) 0%,
+			#1d1d4e 100%
+		);
+	}
+
+	&__name {
+		position: absolute;
+		bottom: 5.6rem;
+		z-index: 2;
+		font-size: 1.6rem;
+		line-height: 100%;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 1.6rem;
+		color: #ffffff;
+	}
+
+	&__info {
+		display: none;
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+	}
+
+	@media (max-width: 767px) {
+		margin-bottom: 0.4rem;
+		width: 22.7rem;
+		height: 34rem;
+
+		&__name {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+.doctor.active {
+	background: #2b2b58;
+
+	.doctor__info {
+		position: absolute;
+		bottom: 16rem;
+		display: block;
+		padding: 0 6rem;
+		margin: 0 auto;
+		font-size: 1.8rem;
+		line-height: 100%;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.8);
+
+		&::after {
+			content: "";
+			position: relative;
+			z-index: 2;
+			left: 50%;
+			top: 14rem;
+			display: block;
+			width: 2.4rem;
+			height: 2.4rem;
+			color: rgba(255, 255, 255, 0.3);
+			background: url(../img/services/fi_chevron-right.svg) no-repeat
+				center/cover;
+		}
+	}
+
+	.doctor__name {
+		bottom: 28.4rem;
+	}
+
+	@media (max-width: 767px) {
+		.doctor__name {
+			font-size: 1.4rem;
+			bottom: 20.4rem;
+		}
+
+		.doctor__info {
+			font-size: 1.6rem;
+			padding: 0 1.8rem;
+			bottom: 10rem;
+			top: unset;
+
+			&::after {
+				top: 9rem;
+			}
+		}
+	}
+}

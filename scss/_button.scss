@@ -1,0 +1,94 @@
+.collapse {
+	&__btn {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2rem;
+		margin-top: 3.2rem;
+		width: 17rem;
+		height: 6.4rem;
+		background: #c9ab63;
+		overflow: hidden;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		transition: all 0.3s linear;
+
+		&:hover {
+			color: #0f0f28;
+			box-shadow: 0px 5px 10px 0px #c9ab63;
+		}
+
+		&:after {
+			content: "";
+			width: 17rem;
+			height: 8rem;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			background-image: url(../img/animation/btn-blick.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			-webkit-animation: btn_shine 5s linear infinite;
+			animation: btn_shine 5s linear infinite;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+		}
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		vertical-align: top;
+		line-height: 140%;
+		color: rgba(15, 15, 40, 0.6);
+		padding: 0 1rem;
+	}
+
+	@media (max-width: 992px) {
+		&__btn {
+			margin-top: 2.4rem;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+
+	@media (max-width: 767px) {
+		&__btn {
+			width: 15.6rem;
+			height: 4.6rem;
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@-webkit-keyframes btn_shine {
+	0% {
+		left: -15rem;
+	}
+
+	to {
+		left: calc(100% + 15rem);
+	}
+}
+
+@keyframes btn_shine {
+	0% {
+		left: -10rem;
+	}
+
+	to {
+		left: calc(100% + 10rem);
+	}
+}

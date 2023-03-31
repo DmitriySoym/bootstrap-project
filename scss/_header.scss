@@ -1,0 +1,294 @@
+@mixin height-100vh {
+	height: calc(var(--vh, 1vh) * 100);
+}
+.header {
+	position: relative;
+	min-width: 29.6rem;
+	background: #0f0f28;
+
+	&__row,
+	&__row-mobile {
+		position: fixed;
+		padding-top: 5.7rem;
+	}
+
+	&__burger {
+		position: fixed;
+		z-index: 5;
+		left: 0;
+		top: 0;
+		min-width: 29.6rem;
+		@include height-100vh();
+		background: #0f0f28;
+		transition: all 0.3s linear;
+	}
+
+	&__logo {
+		display: block;
+		margin: 0 auto;
+		width: 26rem;
+		height: 10.2rem;
+		transform: translateX(1.8rem);
+		border: 1px solid transparent;
+		transition: all 0.3s linear;
+		cursor: pointer;
+
+		&:hover {
+			border: 1px solid #c9ab63;
+			border-radius: 1rem;
+		}
+	}
+
+	&__nav {
+		position: fixed;
+		top: 32.2rem;
+		left: 5.6rem;
+	}
+
+	&__nav-row {
+		display: flex;
+		flex-direction: column;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 100%;
+		color: #ffffff;
+		transition: all 0.3s ease-in-out;
+
+		& > a {
+			margin-bottom: 1.6rem;
+		}
+
+		& > a:hover {
+			transition: all 0.3s linear;
+			color: #c9ab63;
+		}
+
+		& > a.active {
+			color: #c9ab63;
+		}
+	}
+
+	&__btn {
+		position: fixed;
+		left: 5.6rem;
+		bottom: 5.6rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 19px 30px 15px;
+		gap: 10px;
+		width: 18.4rem;
+		height: 4.8rem;
+		border: 0.2rem solid #c9ab63;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover > a {
+			transition: all 0.3s linear;
+			color: #c9ab63;
+		}
+	}
+
+	&__btn-icon {
+		display: none;
+		position: fixed;
+		right: 4rem;
+		top: 2.6rem;
+		width: 3.6rem;
+		height: 3.6rem;
+	}
+
+	&__btn-mobile {
+		display: none;
+		position: fixed;
+		right: 4rem;
+		top: 2.6rem;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 19px 30px 15px;
+		gap: 10px;
+		width: 18.4rem;
+		height: 4.8rem;
+		border: 0.2rem solid #c9ab63;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover > a {
+			transition: all 0.3s linear;
+			color: #c9ab63;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: 1.2rem;
+		top: 1.2rem;
+		display: none;
+	}
+	&__close.active {
+		display: block;
+	}
+
+	&__bueger-wrapper {
+		position: absolute;
+		display: none;
+		top: 3.5rem;
+		left: 4rem;
+		width: 4.5rem;
+		height: 4.5rem;
+		background: inherit;
+	}
+
+	&__burger-btn {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 4.5rem;
+		height: 0.5rem;
+		background-color: #c9ab63;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			display: block;
+			height: 0.5rem;
+			width: 3rem;
+			background-color: #c9ab63;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: -1rem;
+			display: block;
+			height: 0.5rem;
+			width: 3rem;
+			background-color: #c9ab63;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		position: fixed;
+		z-index: 3;
+		width: 100%;
+		height: 10rem;
+
+		&__btn-mobile {
+			display: flex;
+		}
+
+		&__bueger-wrapper {
+			display: block;
+		}
+
+		&__burger-btn {
+			display: block;
+		}
+
+		&__burger {
+			transform: translateY(-110%);
+		}
+
+		&__burger.active {
+			transform: translateY(0);
+		}
+
+		&__nav-row {
+			font-size: 1.6rem;
+		}
+
+		&__nav {
+			top: 33.2rem;
+		}
+
+		&__row-mobile {
+			position: unset;
+			display: block;
+			width: fit-content;
+			margin: 0 auto;
+			padding-top: 1.2rem;
+		}
+
+		&__logo {
+			height: 9rem;
+		}
+
+		&__logo-mobile {
+			display: none;
+			margin: 0 auto;
+			display: block;
+			width: 19rem;
+			height: 7.5rem;
+			transform: translateX(0);
+		}
+	}
+
+	@media (max-width: 767px) {
+		&__burger-btn {
+			width: 4rem;
+
+			&:before {
+				width: 2.5rem;
+			}
+
+			&::after {
+				width: 2.5rem;
+			}
+		}
+
+		&__logo {
+			height: 8.3rem;
+		}
+
+		&__nav {
+			top: 18.4rem;
+		}
+
+		&__btn-icon {
+			display: block;
+		}
+
+		&__btn-mobile {
+			display: none;
+		}
+	}
+
+	@media (max-width: 576px) {
+		height: 8rem;
+
+		&__row-mobile {
+			padding-top: 1.8rem;
+		}
+
+		&__logo-mobile {
+			width: 11rem;
+			height: 4.4rem;
+		}
+	}
+}
+
+.overlay.active {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include height-100vh();
+	width: 100%;
+	background: rgba(15, 15, 40, 0.8);
+	backdrop-filter: blur(4px);
+	z-index: 1;
+	transition: all 0.6s;
+}
