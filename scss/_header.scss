@@ -269,6 +269,10 @@
 	@media (max-width: 576px) {
 		height: 8rem;
 
+		&__bueger-wrapper {
+			top: 2.5rem;
+		}
+
 		&__row-mobile {
 			padding-top: 1.8rem;
 		}

@@ -522,6 +522,9 @@ h6 {
   .header {
     height: 8rem;
   }
+  .header__bueger-wrapper {
+    top: 2.5rem;
+  }
   .header__row-mobile {
     padding-top: 1.8rem;
   }
