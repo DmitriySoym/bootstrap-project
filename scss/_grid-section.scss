@@ -2,9 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
+	width: 100%;
+	min-height: 320px;
+	height: 100%;
 	padding-left: 2.4rem;
 	padding-bottom: 2.4rem;
 	cursor: pointer;
+	transition: all 0.3s linear;
 
 	@media (max-width: 700px) {
 		padding-left: 0.8rem;
@@ -15,10 +19,11 @@
 .grid-section {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	width: 100%;
 
 	@supports (display: grid) {
 		display: grid;
-		height: 101.6rem;
 	}
 
 	grid-template-rows: repeat(3, 1fr);
@@ -28,10 +33,13 @@
 		"block1 block4 block5 block6"
 		"block7 block8 block9 block9";
 	gap: 1rem;
-	max-width: 160rem;
-	width: 100%;
 	padding: 0 0.5rem;
 	margin-bottom: 3rem;
+
+	& > div:hover {
+		box-shadow: 0 0 5px 5px #c9ab63;
+		transform: translateY(-3px);
+	}
 
 	&__title {
 		max-width: 26.6rem;
@@ -150,7 +158,7 @@
 			url(../img/grid-section/block-3-9.jpg) no-repeat right top/cover;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1600px) {
 		margin: 0 auto;
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-columns: repeat(2, 1fr);
@@ -162,9 +170,7 @@
 			"block5 block6"
 			"block9 block9";
 		gap: 0.8rem;
-		max-width: 70.8rem;
 		width: 100%;
-		height: 196rem;
 
 		&__title {
 			font-size: 2.4rem;

@@ -24,6 +24,14 @@
 		color: #0f0f28;
 		text-align: left;
 		box-shadow: unset;
+
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:active {
+			color: #c9ab63;
+		}
 	}
 
 	&__title-head {

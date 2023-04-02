@@ -1251,6 +1251,12 @@ h6 {
   text-align: left;
   box-shadow: unset;
 }
+.faq__btn:focus {
+  text-decoration: none;
+}
+.faq__btn:active {
+  color: #c9ab63;
+}
 .faq__title-head {
   position: relative;
   font-size: 5rem;
@@ -1384,9 +1390,13 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
   padding-left: 2.4rem;
   padding-bottom: 2.4rem;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
 @media (max-width: 700px) {
   .grid-section__block-9, .grid-section__block-8, .grid-section__block-7, .grid-section__block-6, .grid-section__block-5, .grid-section__block-4, .grid-section__block-3, .grid-section__block-2, .grid-section__block-1 {
@@ -1398,20 +1408,23 @@ h6 {
 .grid-section {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "block1 block2 block3 block3" "block1 block4 block5 block6" "block7 block8 block9 block9";
   gap: 1rem;
-  max-width: 160rem;
-  width: 100%;
   padding: 0 0.5rem;
   margin-bottom: 3rem;
 }
 @supports (display: grid) {
   .grid-section {
     display: grid;
-    height: 101.6rem;
   }
+}
+.grid-section > div:hover {
+  box-shadow: 0 0 5px 5px #c9ab63;
+  transform: translateY(-3px);
 }
 .grid-section__title {
   max-width: 26.6rem;
@@ -1465,16 +1478,14 @@ h6 {
   grid-area: block9;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 27.42%, rgba(0, 0, 0, 0.6) 100%), url(../img/grid-section/block-3-9.jpg) no-repeat right top/cover;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .grid-section {
     margin: 0 auto;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "block2 block4" "block1 block1" "block7 block8" "block3 block3" "block5 block6" "block9 block9";
     gap: 0.8rem;
-    max-width: 70.8rem;
     width: 100%;
-    height: 196rem;
   }
   .grid-section__title {
     font-size: 2.4rem;
