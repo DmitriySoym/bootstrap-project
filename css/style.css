@@ -1422,7 +1422,7 @@ h6 {
     display: grid;
   }
 }
-.grid-section > div:hover {
+.grid-section > a:hover {
   box-shadow: 0 0 5px 5px #c9ab63;
   transform: translateY(-3px);
 }
