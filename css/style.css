@@ -1122,6 +1122,9 @@ h6 {
   }
 }
 @media (max-width: 992px) {
+  .massage {
+    margin-bottom: 4rem;
+  }
   .massage__btn {
     margin-top: 2.4rem;
   }
